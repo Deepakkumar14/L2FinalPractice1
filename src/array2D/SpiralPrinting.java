@@ -12,7 +12,7 @@ public class SpiralPrinting {
 
         while(top<=bottom && left<=right) {
 
-            for (int i = left; i <= bottom; i++) {
+            for (int i = left; i <= right; i++) {
                 System.out.print(array1[top][i]+" ");
             }
             top++;
