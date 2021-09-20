@@ -1,27 +1,18 @@
 package Sorting;
 
 import javax.swing.plaf.IconUIResource;
+import java.util.Arrays;
 
 public class MaximumToys {
     public static void main(String[] args) {
-        int array[] = {200,30,50};
+        int array[] = {20,30,50};
         int k=50;
-        int count=1;
+        int count=0;
+        Arrays.sort(array);
         int sum=0;
-        int index=0;
         for(int i=0;i< array.length;i++){
-            if(array[i]<k) {
-                sum = array[i];
-                index=i;
-                break;
-            }
-        }
-
-        for(int i=0;i< array.length;i++){
-            if(i==index)
-                continue;
-
-            else if(sum+array[i]<=k) {
+            if(sum+array[i]<=k) {
+                sum=sum+array[i];
                 count++;
             }
         }
