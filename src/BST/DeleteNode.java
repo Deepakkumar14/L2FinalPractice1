@@ -13,8 +13,8 @@ public class DeleteNode {
         }
 
         public static Node getMinimumKey(Node curr) {
-            while (curr.right != null) {
-                curr = curr.right;
+            while (curr.left != null) {
+                curr = curr.left;
             }
             return curr;
         }
@@ -86,7 +86,7 @@ public class DeleteNode {
             // Case 2: node to be deleted has two children
             else if (curr.left != null && curr.right != null) {
                 // find its inorder successor node
-                Node successor = getMinimumKey(curr.left);
+                Node successor = getMinimumKey(curr.right);
 
                 // store successor value
                 int val = successor.data;
@@ -124,14 +124,14 @@ public class DeleteNode {
         }
 
         public static void main(String[] args) {
-            int[] keys = {1,3,5,6,4,10,8,12,7};
+            int[] keys = {20,8,10,25,27,30};
 
             Node root = null;
             for (int key : keys) {
                 root = insert(root, key);
             }
 
-            root = deleteNode(root, 4);
+            root = deleteNode(root, 10);
             inorder(root);
         }
-        }
+    }
