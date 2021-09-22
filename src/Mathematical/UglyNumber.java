@@ -1,6 +1,6 @@
 package Mathematical;
 
-import java.sql.ClientInfoStatus;
+
 import java.util.ArrayList;
 
 public class UglyNumber {
@@ -15,7 +15,7 @@ public class UglyNumber {
             ArrayList factors=new ArrayList();
             for (int k= 1; k <= j; ++k) {
                 if (j % k== 0) {
-                    if(k%2!=0)
+                    //if(k%2!=0)
 
                 }
             }
